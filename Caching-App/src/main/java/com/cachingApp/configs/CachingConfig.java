@@ -16,8 +16,6 @@ import java.time.Duration;
 @Configuration
 @EnableCaching
 public class CachingConfig {
-
-
     @Bean
     public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory){
         RedisCacheConfiguration redisCacheConfiguration =
@@ -31,5 +29,4 @@ public class CachingConfig {
                 .cacheDefaults(redisCacheConfiguration)
                 .build();
     }
-
 }
